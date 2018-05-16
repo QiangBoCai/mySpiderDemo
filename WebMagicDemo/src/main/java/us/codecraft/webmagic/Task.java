@@ -3,7 +3,7 @@ package us.codecraft.webmagic;
 /**
  * Interface for identifying different tasks.<br>
  * 用于确定不同任务的接口
- * @author code4crafter@gmail.com <br>
+ * 可以获取Spider的uuid，site
  * @since 0.1.0
  * @see us.codecraft.webmagic.scheduler.Scheduler
  * @see us.codecraft.webmagic.pipeline.Pipeline

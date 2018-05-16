@@ -1,4 +1,4 @@
-package com.lance.samples.webmagic.pageprocessor.githubrepo;
+package com.samples.sample1;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

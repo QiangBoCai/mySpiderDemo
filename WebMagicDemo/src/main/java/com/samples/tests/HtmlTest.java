@@ -1,4 +1,4 @@
-package us.codecraft.webmagic;
+package com.samples.tests;
 
 import org.junit.Ignore;
 import org.junit.Test;

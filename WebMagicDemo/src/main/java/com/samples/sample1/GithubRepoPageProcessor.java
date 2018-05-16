@@ -1,4 +1,4 @@
-package com.lance.samples.webmagic.pageprocessor.githubrepo;
+package com.samples.sample1;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,16 +9,21 @@ import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.pipeline.JsonFilePipeline;
 import us.codecraft.webmagic.processor.PageProcessor;
 
-/***
- *1.爬虫相关配置Site
- *2.页面元素抽取Page>Resultitems>JavaBean
- *3.新链接Page>addTargetRequests
- *
+/**
+ * @author Lance
+ * 第一个爬虫GithubRepoPageProcessor
+ * 了解weblogic爬虫创建的基本流程;
+ *	
+ * 0.爬虫相关配置Site，编码，抓取间隔，重试次数等
+ * 1.Spider  create创建爬虫，thread开启线程，run启动爬虫
+ * 2.页面元素抽取Page>Resultitems>JavaBean
+ * 3.新链接Page抽取>addTargetRequests
+ * 4.addPipeline 信息存储
  */
 public class GithubRepoPageProcessor implements PageProcessor{
-	//Logger logger = Logger.getLogger(GithubRepoPageProcessor.class);
 	 protected Logger logger = LoggerFactory.getLogger(getClass());
-	//1.爬虫相关配置，eg:编码，抓取间隔，重试次数等
+	
+	 //0.爬虫相关配置，eg:编码，抓取间隔，重试次数等
 	private Site site = Site.me()
 						.setRetryTimes(3)
 						.setSleepTime(1000)
@@ -71,11 +76,11 @@ public class GithubRepoPageProcessor implements PageProcessor{
 
 	
 	public static void main(String[] args) 
-	{			//创建爬虫
+	{			//1.创建爬虫
 		Spider.create(new GithubRepoPageProcessor())
 		 	   .addUrl("https://github.com/code4craft")
-		 	   //保存结果
-		 	   .addPipeline(new JsonFilePipeline("./dat     a/"))
+		 	   //4.保存结果
+		 	   .addPipeline(new JsonFilePipeline("./data/"))
 		 	   //开启5个线程抓取
 		 	   .thread(5)
 		 	   //启动爬虫

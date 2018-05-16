@@ -1,7 +1,11 @@
-package us.codecraft.webmagic;
+package com.samples.tests;
 
 import org.junit.Ignore;
 import org.junit.Test;
+
+import us.codecraft.webmagic.Page;
+import us.codecraft.webmagic.SimpleHttpClient;
+import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.model.AfterExtractor;
 import us.codecraft.webmagic.model.annotation.ExtractBy;
 

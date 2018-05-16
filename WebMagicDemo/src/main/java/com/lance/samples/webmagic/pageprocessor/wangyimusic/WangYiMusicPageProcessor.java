@@ -3,10 +3,10 @@ package com.lance.samples.webmagic.pageprocessor.wangyimusic;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.lance.samples.webmagic.pageprocessor.githubrepo.GithubRepo;
-import com.lance.samples.webmagic.pageprocessor.githubrepo.GithubRepoPageProcessor;
-import com.lance.samples.webmagic.pageprocessor.githubrepo.GithubRepoPipeline;
 import com.lance.webmagic.downloader.selenium.SeleniumDownloader;
+import com.samples.sample1.GithubRepo;
+import com.samples.sample1.GithubRepoPageProcessor;
+import com.samples.sample1.GithubRepoPipeline;
 
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;

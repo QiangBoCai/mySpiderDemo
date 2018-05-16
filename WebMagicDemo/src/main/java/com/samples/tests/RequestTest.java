@@ -1,6 +1,8 @@
-package us.codecraft.webmagic;
+package com.samples.tests;
 
 import org.junit.Test;
+
+import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.utils.HttpConstant;
 
 import static org.assertj.core.api.Assertions.assertThat;

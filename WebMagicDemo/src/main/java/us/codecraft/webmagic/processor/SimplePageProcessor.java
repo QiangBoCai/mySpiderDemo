@@ -7,7 +7,9 @@ import java.util.List;
 
 /**
  * A simple PageProcessor.
- *
+ * 已过时：简单的PageProcess，
+ * 
+ * 注：爬虫编写流程可以参考:GithubRepoPageProcessor
  * @author code4crafter@gmail.com <br>
  * @since 0.1.0
  */

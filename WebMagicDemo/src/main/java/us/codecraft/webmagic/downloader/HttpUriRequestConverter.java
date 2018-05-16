@@ -115,7 +115,9 @@ public class HttpUriRequestConverter {
             requestConfigBuilder.setConnectionRequestTimeout(site.getTimeOut())
                     .setSocketTimeout(site.getTimeOut())
                     .setConnectTimeout(site.getTimeOut())
-                    .setCookieSpec(CookieSpecs.STANDARD);
+                    .setCookieSpec(site.getCookieSpec());
+                  //  .setCookieSpec(CookieSpecs.STANDARD);
+			//此处默认写死，有一些网站不是采用的Standard，会识别不了Cookie,eg:CookieSpecs.BROWSER_COMPATIBILITY)
         }
         //RequestConfigBuilder 根据Proxy设置Ip代理
         if (proxy != null) {

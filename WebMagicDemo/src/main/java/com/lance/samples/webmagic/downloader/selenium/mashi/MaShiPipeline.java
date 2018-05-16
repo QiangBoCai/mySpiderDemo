@@ -3,7 +3,7 @@ package com.lance.samples.webmagic.downloader.selenium.mashi;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.lance.samples.webmagic.pageprocessor.githubrepo.GithubRepo;
+import com.samples.sample1.GithubRepo;
 
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;

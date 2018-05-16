@@ -1,4 +1,4 @@
-package com.lance.samples.webmagic.pageprocessor.githubrepo;
+package com.samples.sample1;
 
 import java.util.List;
 

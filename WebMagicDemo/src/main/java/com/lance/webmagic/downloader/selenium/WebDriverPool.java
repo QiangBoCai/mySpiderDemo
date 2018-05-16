@@ -45,7 +45,7 @@ class WebDriverPool {
 	private WebDriver mDriver = null;
 	private boolean mAutoQuitDriver = true;
 
-	private static final String DEFAULT_CONFIG_FILE = "src/config.ini";
+	private static final String DEFAULT_CONFIG_FILE = "src/main/java/config.ini";
 	private static final String DRIVER_FIREFOX = "firefox";
 	private static final String DRIVER_CHROME = "chrome";
 	private static final String DRIVER_PHANTOMJS = "phantomjs";

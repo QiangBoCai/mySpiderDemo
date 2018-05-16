@@ -1,7 +1,8 @@
-package us.codecraft.webmagic;
+package com.samples.tests;
 
 import org.junit.Test;
 
+import us.codecraft.webmagic.ResultItems;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

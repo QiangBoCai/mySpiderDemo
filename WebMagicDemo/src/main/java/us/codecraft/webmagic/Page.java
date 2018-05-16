@@ -34,7 +34,8 @@ public class Page {
 
 	//请求
     private Request request;
-    //
+    //Page页面解析的结果集;Map<String, Object> fields 
+    //Object是页面抽取的结果，可以是url，html，String,json等
     private ResultItems resultItems = new ResultItems();
 
     private Html html;

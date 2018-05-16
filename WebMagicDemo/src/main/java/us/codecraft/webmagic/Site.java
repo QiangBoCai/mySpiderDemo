@@ -4,6 +4,8 @@ import us.codecraft.webmagic.utils.HttpConstant;
 
 import java.util.*;
 
+import org.apache.http.client.config.CookieSpecs;
+
 /**
  * Object contains setting for crawler.<br>
  * 包含爬虫设置的类
@@ -36,15 +38,20 @@ public class Site {
     //允许接受的响应状态码
     private static final Set<Integer> DEFAULT_STATUS_CODE_SET = new HashSet<Integer>();
     private Set<Integer> acceptStatCode = DEFAULT_STATUS_CODE_SET;
-	 //请求头 Request Header eg:request.addHeader("Accept-Encoding", "gzip"); 
+	//请求头 Request Header eg:request.addHeader("Accept-Encoding", "gzip"); 
     private Map<String, String> headers = new HashMap<String, String>();
-    private boolean useGzip = true;//网页是否需要支持gzip 编码类型
+	//网页是否需要支持gzip 编码类型
+    private boolean useGzip = true;
     //是否禁用cookie管理
     private boolean disableCookieManagement = false;
+	// Cookie策略
+    private String cookieSpec = CookieSpecs.STANDARD;//add by lance
+    
 
     static {// 成功访问的状态码200
         DEFAULT_STATUS_CODE_SET.add(HttpConstant.StatusCode.CODE_200);
     }
+
 
     /**
      * new a Site
@@ -140,7 +147,22 @@ public class Site {
         this.domain = domain;
         return this;
     }
-
+    
+    /*
+     * 获取cookie策略
+     */
+	public String getCookieSpec() {
+		return cookieSpec;
+	}
+	/*
+	 * 设置cookie策略
+	 */
+	public Site setCookieSpec(String cookieSpec) {
+		this.cookieSpec = cookieSpec;
+		return this;
+	}
+	
+	
     /**
      * Set charset of page manually.<br>
      * When charset is not set or set to null, it can be auto detected by Http header.
@@ -396,7 +418,10 @@ public class Site {
                 ", timeOut=" + timeOut +
                 ", acceptStatCode=" + acceptStatCode +
                 ", headers=" + headers +
+                ", cookieSpec="+cookieSpec+
                 '}';
     }
+
+
 
 }

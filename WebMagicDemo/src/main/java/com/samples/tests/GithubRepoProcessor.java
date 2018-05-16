@@ -1,4 +1,4 @@
-package us.codecraft.webmagic.processor;
+package com.samples.tests;
 
 import junit.framework.Assert;
 import org.junit.Test;
@@ -6,6 +6,7 @@ import us.codecraft.webmagic.*;
 import us.codecraft.webmagic.downloader.MockGithubDownloader;
 import us.codecraft.webmagic.model.OOSpider;
 import us.codecraft.webmagic.pipeline.Pipeline;
+import us.codecraft.webmagic.processor.PageProcessor;
 
 /**
  * @author code4crafter@gmail.com
